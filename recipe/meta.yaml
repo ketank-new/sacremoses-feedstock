@@ -1,5 +1,5 @@
 {% set name = "sacremoses" %}
-{% set version = "0.0.35" %}
+{% set version = "0.0.38" %}
 
 package:
   name: "{{ name|lower }}"
