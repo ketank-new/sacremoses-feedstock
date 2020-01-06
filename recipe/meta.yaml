@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "1e84da95cbdbfc8bbc148c0feb5a4737c5d9757071b79e8c1129e449410e410a"
+  sha256: 34dcfaacf9fa34a6353424431f0e4fcc60e8ebb27ffee320d57396690b712a3b
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
     - click
     - joblib
     - python
+    - regex
     - six
     - tqdm
 
