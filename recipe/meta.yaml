@@ -1,20 +1,20 @@
 {% set name = "sacremoses" %}
-{% set version = "0.0.38" %}
+{% set version = "0.0.40" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 34dcfaacf9fa34a6353424431f0e4fcc60e8ebb27ffee320d57396690b712a3b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3ef1f7fe4c07c3c5e42c88a4a2db97df8f20ddf9b60cc014b37ce65f7ac2e7c0
 
 build:
   noarch: python
   number: 0
   entry_points:
     - sacremoses=sacremoses.cli:cli
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -39,8 +39,8 @@ about:
   license: LGPL-2.1-or-later
   license_family: LGPL
   license_file: LICENSE
-  summary: "SacreMoses"
+  summary: SacreMoses
 
 extra:
   recipe-maintainers:
-    - roccqqck 
+    - roccqqck
