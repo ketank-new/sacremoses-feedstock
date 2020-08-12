@@ -21,6 +21,7 @@ spec:
         apt-get update
         apt-get install -y wget
         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -P /workspace/ 
-        bash /workspace/miniconda.sh -b -p /workspace/miniconda/
+        bash /workspace/Miniconda3-latest-Linux-x86_64.sh -b -p /workspace/miniconda/
         export PATH=/workspace/miniconda/bin:$PATH
+        conda install -y conda-build
         conda build /workspace/source/recipe/meta.yaml
