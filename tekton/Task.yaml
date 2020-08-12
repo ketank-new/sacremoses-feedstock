@@ -17,7 +17,7 @@ spec:
   steps:
     - name: view-repo
       image: ubuntu
-      scripts: |
+      script: |
         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh bash ~/miniconda.sh -b -p $HOME/miniconda
         export PATH=$HOME/miniconda/bin:$PATH
         sh /workspace/source/.scripts/build_steps.sh
