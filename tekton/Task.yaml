@@ -17,4 +17,7 @@ spec:
   steps:
     - name: view-repo
       image: ubuntu
-      command: ['sh', '/workspace/source/.scripts/run_docker_build.sh']
+      scripts: |
+        apt-get update
+        apt-get install -y anaconda
+        sh /workspace/source/.scripts/build_steps.sh
