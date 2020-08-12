@@ -17,4 +17,4 @@ spec:
   steps:
     - name: view-repo
       image: ubuntu
-      command: ['ls', '/workspace/source/']
+      command: ['sh', '/workspace/source/.scripts/run_docker_build.sh']
