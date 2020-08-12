@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: build-repo
+spec:
+  params:
+  - name: revision
+    type: string
+    default: buil-tekton
+  - name: GIT_URL
+    type: string
+    default: "https://github.com/ketank-new/sacremoses-feedstock.git"
+  resources:
+    inputs:
+    - name: source
+      type: git
+  steps:
+    - name: view-repo
+      image: ubuntu
+      command: ['ls', '/workspace/source/']
